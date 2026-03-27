@@ -7,3 +7,7 @@ venv/
 
 # python cache
 __pycache__/
+
+# ds stores files
+*/.DS_Store
+.DS_Store
