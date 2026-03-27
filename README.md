@@ -1,4 +1,5 @@
 # Hardware-Accelerated Neural Network — Software (PS)
+
 MNIST digit recognition neural network running on the software side (PS) of the AMD AUP-ZU3 board. The goal is to write and time a software baseline, then slowly move the heavy matrix multiplication layers to the FPGA (PL) and measure the speedup.
 
 **Team:** Ethan Ostroff & Neirit Mahabub
@@ -26,7 +27,7 @@ neural-network-software/
 │       - Trains the model using Keras/TensorFlow
 │       - Exports weights as w1.npy, b1.npy, w2.npy, b2.npy
 │
-└── xilinx_files/       # Inference notebook (run on AUP-ZU3 board)
+└── board_files/        # Inference notebook (run on AUP-ZU3 board)
     └── board_inference.ipynb
         - NumPy forward pass (no PyTorch/Keras needed)
         - Loads .npy weight files
@@ -37,7 +38,7 @@ neural-network-software/
 
 ## Dependencies
 
-| Environment | Libraries |
-|---|---|
-| Laptop (training) | `tensorflow`, `keras`, `numpy`, `matplotlib` |
-| AUP-ZU3 board (inference) | `numpy`, `matplotlib` |
+| Environment               | Libraries                                    |
+| ------------------------- | -------------------------------------------- |
+| Laptop (training)         | `tensorflow`, `keras`, `numpy`, `matplotlib` |
+| AUP-ZU3 board (inference) | `numpy`, `matplotlib`                        |
